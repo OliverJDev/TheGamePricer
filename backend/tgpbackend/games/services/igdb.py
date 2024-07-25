@@ -11,7 +11,7 @@ def loadIGDBGame(id):
     headers = {
         'Client-ID': 'e7gbnyhuli60xm63ir79zdfkrjanlp',
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer 8yhdiztp6o9xpdhh66ph83r44z739y',
+        'Authorization': '',
     }
     conn.request("POST", "/v4/games", payload, headers)
     res = conn.getresponse()
