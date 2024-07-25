@@ -1,0 +1,2 @@
+def loadSteamHeaderLink(link):
+    pass
