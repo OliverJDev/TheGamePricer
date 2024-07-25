@@ -36,7 +36,7 @@ def process_feed(url, currency):
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36',
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
             'Connection': 'keep-alive',
-            'Referer': 'https://www.google.com/',  # Add the referer if needed
+            'Referer': 'https://www.google.com/',
             'Upgrade-Insecure-Requests': '1',
         }
 
@@ -71,7 +71,6 @@ def process_feed(url, currency):
                 if 'out of stock' not in delivery_time:
                     game = Game.objects.filter(name__iexact=title_shop)
                     if game.exists():
-                        #check if game price already exists ( at this price )
                         foundGame = game.first()
                         gamePrice = GamePrice.objects.filter(store=store, currency=currency, game=foundGame)
                         if gamePrice.exists():

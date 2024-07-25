@@ -25,9 +25,9 @@ class GetAllGamePrices(generics.ListAPIView):
 
 class LoadPriceByGameId(APIView):
     def get(self, request, *args, **kwargs):
-        # gamersgate.startComparison()
-        # gamesplanet.startComparison()
-        # joybuggy.startComparison()
+        gamersgate.startComparison()
+        gamesplanet.startComparison()
+        joybuggy.startComparison()
         kinguin.startComparison()
         recalculateAllGames()
 
